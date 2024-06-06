@@ -26,6 +26,8 @@ public class Client {
 
             // terminal prints
             String resultFromServer = in.readLine();
+            String messageFromServer;
+
             System.out.println("Received result from server: " + resultFromServer);
 
             //send message to server and print in terminal
@@ -33,6 +35,8 @@ public class Client {
             while (true) {
                 messageToSend = scanner.next();
                 out.println(messageToSend);
+                messageFromServer = in.readLine();
+                System.out.println(messageFromServer);
                 if (messageToSend.equals("quit")) {
                     break;
                 }
